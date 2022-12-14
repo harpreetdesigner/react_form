@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import { Card } from '@mui/material';
 import './App.css';
+import UserForm from './Components/Form';
+import UserTable from './Components/Table';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="main_section">
+			<div className="container-fluid">
+				<div className="row">
+					<div className="col-lg-6">
+						<Card variant="elevation" className="box_shadow p-4">
+							<UserForm />
+						</Card>
+					</div>
+					<div className="col-lg-6">
+						<UserTable />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;
